@@ -22,8 +22,8 @@ export default function NavBar({ color, arr }: ThemeType) {
 
     const [showNavTray, setNavTray] = useState<boolean>(false)
 
-    return <div className = {`fixed top-0 left-0 bg z-10 -gray-200 py-2 md:py-4 lg:py-5 xl:py-6 w-screen ${color}`}>
-        {showNavTray? <MdNavigateBefore onClick = {() => { setNavTray(i => !i)}} className = 'text-2xl md:text-3xl lg:text-4xl cursor-pointer' />: <MdContentPasteSearch onClick = {() => { setNavTray(i => !i)}} className = 'text-2xl md:text-3xl lg:text-4xl cursor-pointer' /> }
+    return <div className = {`fixed top-0 left-0 bg ${showNavTray? 'z-10': ''} -gray-200 py-2 md:py-4 lg:py-5 xl:py-6 w-screen ${color}`}>
+        {showNavTray? <MdNavigateBefore onClick = {() => { setNavTray(i => !i)}} className = 'text-2xl md:text-3xl lg:text-4xl cursor-pointer ml-2 md:ml-6' />: <MdContentPasteSearch onClick = {() => { setNavTray(i => !i)}} className = 'text-2xl ml-2 md:ml-6 md:text-3xl lg:text-4xl cursor-pointer' /> }
         <div className = {`${showNavTray? 'scale-x-100': 'scale-x-0'} origin-left h-screen bg-gray-200 shadow-md w-4/5 md:w-1/4 transition duration-500`}>
             <div className = 'py-4 pl-10 text-lg tracking-wider'>
                 Contents
