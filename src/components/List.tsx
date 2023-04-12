@@ -8,7 +8,7 @@ export default function List ({ arr, imgArr }: ListProps) {
     {arr.map((item, i) => {
       return <Link href={`/${i + 1}`} className = 'cursor-pointer hover:scale-105 transition duration-700 shadow-lg' key = {i}>
           <Img className='brightness-75 hover:brightness-100 transition duration-500' src={imgArr[Number(item.id - 1)]} alt = '' />
-          <div className = 'text-2xl md:text-3xl font-semibold ml-3 md:ml-5 lg:ml-7 mt-3 md:mt-5 lg:mt-7'>{item.title}</div>
+          <div className = 'text-xl md:text-3xl ml-3 md:ml-5 lg:ml-7 mt-3 md:mt-5 lg:mt-7'>{item.title}</div>
           <div className = 'text-xs text-gray-500 md:text-sm font-thin lg:text-md px-3 md:px-5 lg:px-7 ml-6 pb-10 pt-3 md:pt-4 lg:pt-6'>{item.synopsis}</div>
       </Link>
     })}
