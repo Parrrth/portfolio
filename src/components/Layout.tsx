@@ -5,7 +5,7 @@ type LayoutProps = {
 }
 
 export default function Layout({ children }: LayoutProps) {
-    return <div className = 'relative'>
+    return <div className = 'overflow-x-hidden'>
         <NavBar />
         {children}
     </div>
