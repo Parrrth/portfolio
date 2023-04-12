@@ -43,7 +43,6 @@ export const getStaticProps: GetStaticProps<{ poem: PoemType }, { poemId: string
         props: {
             poem,
             img: `url("/images/${poem.id}.jpg")`
-        },
-        revalidate: 1000
+        }
     }
 }
