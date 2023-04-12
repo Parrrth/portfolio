@@ -32,6 +32,7 @@ const lora = Lora({subsets: ['latin']})
 const style = Style_Script({ weight: '400', subsets: ['latin'] })
 
 export default function Home({ arr, imgArr }: ListProps) {
+
   return (
     <main className={`${lora.className} bg-gray-200 px-4 flex flex-col items-center h-full`}>
       <NavBar /> 
