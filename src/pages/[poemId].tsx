@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticProps } from "next"
 import arr from '../../poems.json'
-import NavBar from "@/components/NavBar"
 import { IoMdArrowBack } from 'react-icons/io'
 import Link from 'next/link'
 
@@ -13,13 +12,12 @@ export default function PoemItem({ poem, img }: { poem: PoemType, img: string })
         <div style = {{
             backgroundImage: img
         }} className = {`fixed top-0 left-0 w-screen h-screen mix-blend-darken brightness-50 bg-cover bg-no-repeat object-cover`}></div>
-        <NavBar color="text-white" />
         <div className = 'bg-white py-12 md:py-16 lg:py-24 shadow-md absolute top-1/2 left-1/2 flex flex-col -translate-x-1/2 -translate-y-1/2 w-11/12 z-20 my-5 md:w-2/5 lg:w-1/4'>
             <Link className = 'px-4 pt-4 pb-2 text-2xl w-fit' href = {'/'}><IoMdArrowBack/></Link>
             <div className = 'px-5 md:px-8 lg:px-12 text-2xl md:text-4xl self-center mb-5 md:mb-10'>{poem.title}</div>
-            <div className = 'px-5 md:px-8 lg:px-12 text-gray-800 font-semibold'>Language</div>
+            <div className = 'px-5 md:px-8 lg:px-12 text-gray-800 md:text-lg font-semibold'>Language</div>
             <div className = 'px-5 md:px-8 lg:px-12 text-xs md:text-sm text-gray-500'>{poem.language}</div>
-            <div className = 'px-5 md:px-8 lg:px-12 text-gray-800 font-semibold mt-3'>Poem</div>
+            <div className = 'px-5 md:px-8 lg:px-12 text-gray-800 md:text-lg font-semibold mt-3 md:mt-6'>Poem</div>
             <div className = 'px-5 md:px-8 lg:px-12 text-xs md:text-sm text-gray-500 mb-7'>{poem.poem}</div>
         </div>
     </div>

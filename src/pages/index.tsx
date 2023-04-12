@@ -35,7 +35,7 @@ export default function Home({ arr, imgArr }: ListProps) {
 
   return (
     <main className={`${lora.className} bg-gray-200 px-4 flex flex-col items-center h-full`}>
-      <NavBar color='text-black' /> 
+      <NavBar color='text-black' arr = {arr} /> 
       <div className = 'flex flex-col items-center'>  
         <div className = {`${style.className} text-4xl lg:text-7xl xl:text-9xl mt-14 md:mt-16 lg:mt-20 xl:mt-40`}>Parth Choudhary</div> 
         <div className = 'text-xs font-extralight tracking-wide md:text-md lg:text-lg text-gray-700 mt-3'>Archive for poetry written by me. Add more description here.</div>
