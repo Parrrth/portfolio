@@ -45,7 +45,6 @@ export default function Home({ arr, imgArr }: ListProps) {
   )
 }
 
-
 export const getStaticProps: GetStaticProps<ListProps> = () => {
   return {
     props: {
