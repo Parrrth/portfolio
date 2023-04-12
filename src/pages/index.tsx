@@ -8,7 +8,9 @@ import img3 from '../../public/images/3.jpg'
 import img4 from '../../public/images/10.jpg'
 import img5 from '../../public/images/8.jpg'
 import img6 from '../../public/images/11.jpg'
-import Img, { StaticImageData } from 'next/image'
+import { StaticImageData } from 'next/image'
+import NavBar from '@/components/NavBar'
+
 const imgArr = [img1, img2, img3, img4, img5, img6]
 export type ListProps = {
   imgArr: StaticImageData[]
@@ -31,10 +33,11 @@ const style = Style_Script({ weight: '400', subsets: ['latin'] })
 
 export default function Home({ arr, imgArr }: ListProps) {
   return (
-    <main className={`${lora.className} bg-gray-200 px-4 flex flex-col items-center h-full`}> 
+    <main className={`${lora.className} bg-gray-200 px-4 flex flex-col items-center h-full`}>
+      <NavBar /> 
       <div className = 'flex flex-col items-center'>  
-        <div className = {`${style.className} text-4xl lg:text-7xl xl:text-9xl mt-14 md:mt-16 lg:mt-20 xl:mt-24`}>Parth Choudhary</div> 
-        <div className = 'text-xs md:text-md lg:text-lg text-gray-700 mt-3'>Archive for poetry written by me. Add more description here.</div>
+        <div className = {`${style.className} text-4xl lg:text-7xl xl:text-9xl mt-14 md:mt-16 lg:mt-20 xl:mt-40`}>Parth Choudhary</div> 
+        <div className = 'text-xs font-extralight tracking-wide md:text-md lg:text-lg text-gray-700 mt-3'>Archive for poetry written by me. Add more description here.</div>
       </div>
       <List arr={arr} imgArr={imgArr} />
     </main>
@@ -43,7 +46,6 @@ export default function Home({ arr, imgArr }: ListProps) {
 
 
 export const getStaticProps: GetStaticProps<ListProps> = () => {
-
   return {
     props: {
       imgArr,
